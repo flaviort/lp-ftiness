@@ -1,0 +1,49 @@
+/*----------------------------------------
+------------------------------------------
+	## BREAKPOINTS
+------------------------------------------
+----------------------------------------*/
+
+$mq-xs-min: "only screen and (min-width: 420px)";
+$mq-sm-min: "only screen and (min-width: 767px)";
+$mq-md-min: "only screen and (min-width: 992px)";
+$mq-lg-min: "only screen and (min-width: 1200px)";
+$mq-xl-min: "only screen and (min-width: 1360px)";
+$mq-xxl-min: "only screen and (min-width: 1600px)";
+$mq-xxl-max: "only screen and (max-width: 1660px)";
+$mq-xl-max: "only screen and (max-width: 1360px)";
+$mq-lg-max: "only screen and (max-width: 1200px)";
+$mq-md-max: "only screen and (max-width: 992px)";
+$mq-sm-max: "only screen and (max-width: 767px)";
+$mq-xs-max: "only screen and (max-width: 575px)";
+$mq-xxs-max: "only screen and (max-width: 420px)";
+$mq-xxxs-max: "only screen and (max-width: 375px)";
+$mq-old-max: "only screen and (max-width: 330px)";
+
+/*----------------------------------------
+------------------------------------------
+	## FONTS
+------------------------------------------
+----------------------------------------*/
+
+
+$futura: 'Futura', sans-serif;
+$pt-sans: 'PT Sans', sans-serif;
+
+$regular: 400;
+$bold: 700;
+
+/*----------------------------------------
+------------------------------------------
+	## COLORS
+------------------------------------------
+----------------------------------------*/
+
+$white:				#fff;
+$almost-white:		#eee;
+$gray-light:		#aaa;
+$gray-medium:		#666;
+$gray-dark:			#333;
+$black:				#111;
+
+$pink:				#e12a55;

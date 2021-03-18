@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/_sites/react/static/css/main.6ffa1099.chunk.css",
+    "main.js": "/_sites/react/static/js/main.23795bb2.chunk.js",
+    "main.js.map": "/_sites/react/static/js/main.23795bb2.chunk.js.map",
+    "runtime-main.js": "/_sites/react/static/js/runtime-main.9246c8cd.js",
+    "runtime-main.js.map": "/_sites/react/static/js/runtime-main.9246c8cd.js.map",
+    "static/js/2.08a65590.chunk.js": "/_sites/react/static/js/2.08a65590.chunk.js",
+    "static/js/2.08a65590.chunk.js.map": "/_sites/react/static/js/2.08a65590.chunk.js.map",
+    "index.html": "/_sites/react/index.html",
+    "static/css/main.6ffa1099.chunk.css.map": "/_sites/react/static/css/main.6ffa1099.chunk.css.map",
+    "static/js/2.08a65590.chunk.js.LICENSE.txt": "/_sites/react/static/js/2.08a65590.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/_sites/react/static/media/Futura-Book.8df72c94.woff",
+    "static/media/icon-email.74ab93a3.svg": "/_sites/react/static/media/icon-email.74ab93a3.svg",
+    "static/media/icon-instagram.90a80cd5.svg": "/_sites/react/static/media/icon-instagram.90a80cd5.svg",
+    "static/media/icon-whatsapp.5960a895.svg": "/_sites/react/static/media/icon-whatsapp.5960a895.svg",
+    "static/media/logo.fa6cbdd2.svg": "/_sites/react/static/media/logo.fa6cbdd2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9246c8cd.js",
+    "static/js/2.08a65590.chunk.js",
+    "static/css/main.6ffa1099.chunk.css",
+    "static/js/main.23795bb2.chunk.js"
+  ]
+}
