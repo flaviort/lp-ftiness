@@ -5,6 +5,12 @@
 ----------------------------------------*/
 
 body.home {
+	.body-scroll {
+		overflow: hidden;
+		height: 100%;
+		height: 100vh;
+	} // END BODY OVERFLOW
+
 	#lines {
 		position: fixed;
 		z-index: 0;
@@ -1046,9 +1052,17 @@ body.home {
 			                padding: 0 1px;
 			                line-height: 1;
 
+			                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+								background: transparent;
+							}
+
 			                &:hover,
 			                &:focus {
 			                    background-position: 0 110%;
+
+			                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+									color: $pink;
+								}
 			                } // END HOVER / FOCUS
 						} // END A
 					} // END LINKS

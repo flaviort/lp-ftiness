@@ -24,10 +24,11 @@
     	img,
     	svg {
     		width: 200px;
-    		height: auto;
+    		height: 40px;
 
     		@media #{$mq-xs-max} {
     			width: 150px;
+                height: 30px;
     		}
     	} // END IMG / SVG
     } // END LOGO
