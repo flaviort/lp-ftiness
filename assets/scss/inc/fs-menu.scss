@@ -1,0 +1,223 @@
+/*----------------------------------------
+------------------------------------------
+	## FS MENU
+------------------------------------------
+----------------------------------------*/
+
+#fs-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 9999;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+
+    .lines {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        > div {
+            position: absolute;
+            top: 0;
+            height: 0;
+            width: 0;
+            background-color: $black;
+            display: block;
+            opacity: .5;
+
+            &.line-01 {
+                width: 20%;
+                left: 0;
+            } // END LINE 01
+
+            &.line-02 {
+                width: 40%;
+                left: 15%;
+            } // END LINE 02
+
+            &.line-03 {
+                width: 40%;
+                left: 50%;
+            } // END LINE 03
+
+            &.line-04 {
+                width: 20%;
+                left: 85%;
+            } // END LINE 04
+        } // END > DIV
+    } // END LINES
+
+    .container {
+        position: relative;
+        height: 100%;
+        z-index: 3;
+
+        .row {
+            height: 100%;
+
+            .logo {
+                position: absolute;
+                top: 40px;
+                left: 10px;
+                display: inline-block;
+
+                @media #{$mq-sm-max} {
+                    top: 30px;
+                    left: 20px;
+                }
+
+                @media #{$mq-xs-max} {
+                    top: 25px;
+                    left: 15px;
+                }
+
+                &:hover,
+                &:focus {
+                    img,
+                    svg {
+                        path,
+                        polygon,
+                        rect {
+                            fill: $pink;
+                        } // END PATH
+                    } // END IMG / SVG
+                } // END HOVER / FOCUS
+
+                img,
+                svg {
+                    width: 240px;
+                    height: auto;
+
+                    @media #{$mq-sm-max} {
+                        width: 220px;
+                    }
+
+                    @media #{$mq-xs-max} {
+                        width: 200px;
+                    }
+
+                    .text {
+                        @media #{$mq-sm-max} {
+                            display: none;
+                        }
+                    } // END TEXT
+
+                    path,
+                    polygon,
+                    rect {
+                        transition: .3s;
+
+                        @media #{$mq-sm-max} {
+                            fill: $white;
+                        }
+                    } // END PATH
+                } // END IMG / SVG
+            } // END LOGO
+
+            .close {
+                position: absolute;
+                top: 40px;
+                right: 0;
+                display: inline-block;
+                z-index: 9;
+                cursor: pointer;
+
+                @media #{$mq-sm-max} {
+                    top: 25px;
+                }
+
+                @media #{$mq-xs-max} {
+                    top: 20px;
+                }
+
+                img,
+                svg {
+                    width: 40px;
+                    height: 40px;
+                    transition: .6s;
+
+                    path {
+                        fill: $white;
+                    } // END PATH
+                } // END SVG
+            } // END CLOSE
+
+            .menu {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                li {
+                    display: block;
+
+                    .title-big {
+                        color: $white;
+                        display: inline-block;
+                        padding: 10px;
+                        margin: 10px 0;
+
+                        &:before {
+                            background-color: $pink;
+                        } // END BEFORE
+                    } // END TITLE BIG
+                } // END LI
+            } // END MENU
+
+            .social {
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+
+                @media #{$mq-xs-max} {
+                    bottom: 30px;
+                }
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        display: inline-block;
+                        margin-right: 30px;
+
+                        @media #{$mq-xs-max} {
+                            margin-right: 20px;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            img,
+                            svg {
+                                path {
+                                    fill: $pink;
+                                } // END PATH
+                            } // END IMG / SVG
+                        } // END HOVER / FOCUS
+
+                        img,
+                        svg {
+                            width: 30px;
+                            height: 30px;
+
+                            @media #{$mq-xs-max} {
+                                width: 25px;
+                                height: 25px;
+                            }
+
+                            path {
+                                fill: $white;
+                                transition: .3s;
+                            } // END PATH
+                        } // END IMG / SVG
+                    } // END A
+                } // END LI
+            } // END SOCIAL
+        } // END ROW
+    } // END CONTAINER
+} // END FS MENU

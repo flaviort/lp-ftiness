@@ -1,0 +1,1764 @@
+/* VARIABLES */
+/*----------------------------------------
+------------------------------------------
+	## BREAKPOINTS
+------------------------------------------
+----------------------------------------*/
+/*
+body {
+	&::before {
+		content: 'fhd';
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		margin: 20px;
+		padding: 10px;
+		font-size: 14px;
+		color: white;
+		background: black;
+		z-index: 99999999999;
+		opacity: .5;
+		font-family: sans-serif;
+
+		@media only screen and (max-width: 1660px) { content: 'xxl'; }
+		@media only screen and (max-width: 1360px) { content: 'xl'; }
+		@media only screen and (max-width: 1200px) { content: 'lg'; }
+		@media only screen and (max-width: 992px) { content: 'md'; }
+		@media only screen and (max-width: 767px) { content: 'sm'; }
+		@media only screen and (max-width: 575px) { content: 'xs'; }
+		@media only screen and (max-width: 420px) { content: 'xxs'; }
+		@media only screen and (max-width: 375px) { content: 'xxxs'; }
+		@media only screen and (max-width: 330px) { content: 'old'; }
+	}
+}*/
+/*----------------------------------------
+------------------------------------------
+	## CONTAINER SIZES
+------------------------------------------
+----------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+.container {
+  max-width: 1400px;
+  width: 100%; }
+  @media only screen and (max-width: 1660px) {
+    .container {
+      max-width: 85%; } }
+  @media only screen and (max-width: 1200px) {
+    .container {
+      max-width: 90%; } }
+  @media only screen and (max-width: 992px) {
+    .container {
+      max-width: 95%; } }
+  @media only screen and (max-width: 575px) {
+    .container {
+      max-width: calc(100% - 20px); } }
+
+.container-big {
+  max-width: 1600px; }
+  @media only screen and (max-width: 1660px) {
+    .container-big {
+      max-width: 95%; } }
+  @media only screen and (max-width: 575px) {
+    .container-big {
+      max-width: 100%; } }
+
+/*----------------------------------------
+------------------------------------------
+	## FONT FAMILIES / WEIGHTS
+------------------------------------------
+----------------------------------------*/
+@font-face {
+  font-family: 'Futura Std';
+  src: url("../fonts/FuturaStd-Book.woff2") format("woff2"), url("../fonts/FuturaStd-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Futura Std';
+  src: url("../fonts/FuturaStd-Bold.woff2") format("woff2"), url("../fonts/FuturaStd-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+/*----------------------------------------
+------------------------------------------
+	## COLORS
+------------------------------------------
+----------------------------------------*/
+/*----------------------------------------
+------------------------------------------
+	## FONT SIZES
+------------------------------------------
+----------------------------------------*/
+.title-bigger {
+  font-size: 120px;
+  line-height: 1; }
+  @media only screen and (max-width: 1660px) {
+    .title-bigger {
+      font-size: 110px; } }
+  @media only screen and (max-width: 1360px) {
+    .title-bigger {
+      font-size: 100px; } }
+  @media only screen and (max-width: 1200px) {
+    .title-bigger {
+      font-size: 90px; } }
+  @media only screen and (max-width: 992px) {
+    .title-bigger {
+      font-size: 80px; } }
+  @media only screen and (max-width: 767px) {
+    .title-bigger {
+      font-size: 70px;
+      line-height: 1.2; } }
+  @media only screen and (max-width: 575px) {
+    .title-bigger {
+      font-size: 60px; } }
+  @media only screen and (max-width: 420px) {
+    .title-bigger {
+      font-size: 50px; } }
+
+.title-big {
+  font-size: 70px;
+  line-height: 1; }
+  @media only screen and (max-width: 1360px) {
+    .title-big {
+      font-size: 64px; } }
+  @media only screen and (max-width: 1200px) {
+    .title-big {
+      font-size: 58px; } }
+  @media only screen and (max-width: 992px) {
+    .title-big {
+      font-size: 50px; } }
+  @media only screen and (max-width: 767px) {
+    .title-big {
+      font-size: 44px; } }
+  @media only screen and (max-width: 575px) {
+    .title-big {
+      font-size: 36px; } }
+  @media only screen and (max-width: 420px) {
+    .title-big {
+      font-size: 28px; } }
+
+.title-small {
+  font-size: 18px;
+  line-height: 1.8; }
+  @media only screen and (max-width: 992px) {
+    .title-small {
+      font-size: 16px; } }
+
+.title-bigger,
+.title-big,
+.title-small {
+  font-family: "Futura Std", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+  .title-bigger *,
+  .title-big *,
+  .title-small * {
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    color: inherit; }
+  .title-bigger small,
+  .title-big small,
+  .title-small small {
+    font-size: 45%; }
+
+.text-big {
+  font-size: 40px;
+  line-height: 1.6; }
+  @media only screen and (max-width: 1360px) {
+    .text-big {
+      font-size: 36px; } }
+  @media only screen and (max-width: 1200px) {
+    .text-big {
+      font-size: 32px; } }
+  @media only screen and (max-width: 992px) {
+    .text-big {
+      font-size: 26px; } }
+  @media only screen and (max-width: 767px) {
+    .text-big {
+      font-size: 24px; } }
+  @media only screen and (max-width: 575px) {
+    .text-big {
+      font-size: 22px; } }
+
+.text-medium {
+  font-size: 20px;
+  line-height: 1.8; }
+  @media only screen and (max-width: 1200px) {
+    .text-medium {
+      font-size: 18px; } }
+  @media only screen and (max-width: 767px) {
+    .text-medium br {
+      display: block;
+      content: "";
+      margin-top: 30px; } }
+  @media only screen and (max-width: 575px) {
+    .text-medium br {
+      margin-top: 25px; } }
+
+.text-small {
+  font-size: 18px;
+  line-height: 1.8; }
+  @media only screen and (max-width: 992px) {
+    .text-small {
+      font-size: 16px; } }
+  @media only screen and (max-width: 575px) {
+    .text-small {
+      font-size: 14px; } }
+
+.text-big,
+.text-medium,
+.text-small {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400; }
+  .text-big strong, .text-big b,
+  .text-medium strong,
+  .text-medium b,
+  .text-small strong,
+  .text-small b {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    font-weight: 700; }
+  .text-big *,
+  .text-medium *,
+  .text-small * {
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    color: inherit; }
+  .text-big small,
+  .text-medium small,
+  .text-small small {
+    font-size: 45%;
+    vertical-align: text-top; }
+  @media only screen and (max-width: 767px) {
+    .text-big br,
+    .text-medium br,
+    .text-small br {
+      display: block;
+      content: "";
+      margin-top: 30px; } }
+  @media only screen and (max-width: 575px) {
+    .text-big br,
+    .text-medium br,
+    .text-small br {
+      margin-top: 25px; } }
+
+/*----------------------------------------
+------------------------------------------
+	## BUTTONS
+------------------------------------------
+----------------------------------------*/
+.pink-button {
+  background-color: #e12a55;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Futura Std", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 20px 40px;
+  letter-spacing: 1px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none; }
+  @media only screen and (max-width: 767px) {
+    .pink-button {
+      padding: 18px 30px; } }
+  @media only screen and (max-width: 575px) {
+    .pink-button {
+      padding: 18px 25px;
+      font-size: 16px; } }
+  .pink-button:before {
+    background-color: #b32143; }
+
+/*----------------------------------------
+------------------------------------------
+	## ANIMATIONS
+------------------------------------------
+----------------------------------------*/
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes ripple {
+  0% {
+    opacity: .25; }
+  100% {
+    border-radius: 2em;
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3); } }
+
+@keyframes ripple {
+  0% {
+    opacity: .25; }
+  100% {
+    border-radius: 2em;
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3); } }
+
+/* LAYOUT PARTS (USE THESE TO CREATE THE MAIN.CSS) */
+/*----------------------------------------
+------------------------------------------
+	## GENERAL
+------------------------------------------
+----------------------------------------*/
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+a, a:hover {
+  text-decoration: none; }
+
+*:focus, *:hover, * {
+  outline: none; }
+
+.cf::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0; }
+
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.wow {
+  visibility: hidden; }
+
+.vcenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.valign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .valign > [class^="col-"],
+  .valign > [class*=" col-"] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.fancybox-slide > * {
+  padding: 0; }
+
+.svg {
+  display: inline-block;
+  width: 50px;
+  height: 50px; }
+
+section {
+  position: relative;
+  overflow: hidden; }
+
+a {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  outline: none !important; }
+
+img, svg {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  max-width: 100%; }
+
+button {
+  outline: none !important;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+textarea, input {
+  -webkit-appearance: none; }
+
+textarea {
+  resize: vertical; }
+
+form label[for="sendContact"],
+form label[for="sendNews"] {
+  cursor: pointer; }
+
+h1, h2, h3, h4, p {
+  margin: 0; }
+
+body.no-scroll {
+  overflow: hidden !important; }
+
+br {
+  line-height: inherit; }
+
+.block {
+  display: inline-block; }
+
+.rellax {
+  display: inline-block; }
+
+p, a, h1, h2, h3, li, span, button, br, b, strong {
+  font-family: sans-serif; }
+
+button:focus {
+  background-color: transparent; }
+
+.body-overflow {
+  overflow: hidden; }
+
+.video-wrapper {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.video-wrapper iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+@media only screen and (max-width: 992px) {
+  body .fancybox-slide {
+    padding: 20px; } }
+
+@media only screen and (max-width: 992px) {
+  body .fancybox-slide {
+    padding: 15px; } }
+
+/*----------------------------------------
+------------------------------------------
+	## FS MENU
+------------------------------------------
+----------------------------------------*/
+#fs-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 9999;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden; }
+  #fs-menu .lines {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; }
+    #fs-menu .lines > div {
+      position: absolute;
+      top: 0;
+      height: 0;
+      width: 0;
+      background-color: #111;
+      display: block;
+      opacity: .5; }
+      #fs-menu .lines > div.line-01 {
+        width: 20%;
+        left: 0; }
+      #fs-menu .lines > div.line-02 {
+        width: 40%;
+        left: 15%; }
+      #fs-menu .lines > div.line-03 {
+        width: 40%;
+        left: 50%; }
+      #fs-menu .lines > div.line-04 {
+        width: 20%;
+        left: 85%; }
+  #fs-menu .container {
+    position: relative;
+    height: 100%;
+    z-index: 3; }
+    #fs-menu .container .row {
+      height: 100%; }
+      #fs-menu .container .row .logo {
+        position: absolute;
+        top: 40px;
+        left: 10px;
+        display: inline-block; }
+        @media only screen and (max-width: 767px) {
+          #fs-menu .container .row .logo {
+            top: 30px;
+            left: 20px; } }
+        @media only screen and (max-width: 575px) {
+          #fs-menu .container .row .logo {
+            top: 25px;
+            left: 15px; } }
+        #fs-menu .container .row .logo:hover img path,
+        #fs-menu .container .row .logo:hover img polygon,
+        #fs-menu .container .row .logo:hover img rect,
+        #fs-menu .container .row .logo:hover svg path,
+        #fs-menu .container .row .logo:hover svg polygon,
+        #fs-menu .container .row .logo:hover svg rect, #fs-menu .container .row .logo:focus img path,
+        #fs-menu .container .row .logo:focus img polygon,
+        #fs-menu .container .row .logo:focus img rect,
+        #fs-menu .container .row .logo:focus svg path,
+        #fs-menu .container .row .logo:focus svg polygon,
+        #fs-menu .container .row .logo:focus svg rect {
+          fill: #e12a55; }
+        #fs-menu .container .row .logo img,
+        #fs-menu .container .row .logo svg {
+          width: 240px;
+          height: auto; }
+          @media only screen and (max-width: 767px) {
+            #fs-menu .container .row .logo img,
+            #fs-menu .container .row .logo svg {
+              width: 220px; } }
+          @media only screen and (max-width: 575px) {
+            #fs-menu .container .row .logo img,
+            #fs-menu .container .row .logo svg {
+              width: 200px; } }
+          @media only screen and (max-width: 767px) {
+            #fs-menu .container .row .logo img .text,
+            #fs-menu .container .row .logo svg .text {
+              display: none; } }
+          #fs-menu .container .row .logo img path,
+          #fs-menu .container .row .logo img polygon,
+          #fs-menu .container .row .logo img rect,
+          #fs-menu .container .row .logo svg path,
+          #fs-menu .container .row .logo svg polygon,
+          #fs-menu .container .row .logo svg rect {
+            -webkit-transition: .3s;
+            transition: .3s; }
+            @media only screen and (max-width: 767px) {
+              #fs-menu .container .row .logo img path,
+              #fs-menu .container .row .logo img polygon,
+              #fs-menu .container .row .logo img rect,
+              #fs-menu .container .row .logo svg path,
+              #fs-menu .container .row .logo svg polygon,
+              #fs-menu .container .row .logo svg rect {
+                fill: #fff; } }
+      #fs-menu .container .row .close {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        display: inline-block;
+        z-index: 9;
+        cursor: pointer; }
+        @media only screen and (max-width: 767px) {
+          #fs-menu .container .row .close {
+            top: 25px; } }
+        @media only screen and (max-width: 575px) {
+          #fs-menu .container .row .close {
+            top: 20px; } }
+        #fs-menu .container .row .close img,
+        #fs-menu .container .row .close svg {
+          width: 40px;
+          height: 40px;
+          -webkit-transition: .6s;
+          transition: .6s; }
+          #fs-menu .container .row .close img path,
+          #fs-menu .container .row .close svg path {
+            fill: #fff; }
+      #fs-menu .container .row .menu {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
+        #fs-menu .container .row .menu li {
+          display: block; }
+          #fs-menu .container .row .menu li .title-big {
+            color: #fff;
+            display: inline-block;
+            padding: 10px;
+            margin: 10px 0; }
+            #fs-menu .container .row .menu li .title-big:before {
+              background-color: #e12a55; }
+      #fs-menu .container .row .social {
+        position: absolute;
+        bottom: 30px;
+        left: 30px; }
+        @media only screen and (max-width: 575px) {
+          #fs-menu .container .row .social {
+            bottom: 30px; } }
+        #fs-menu .container .row .social li {
+          display: inline-block; }
+          #fs-menu .container .row .social li a {
+            display: inline-block;
+            margin-right: 30px; }
+            @media only screen and (max-width: 575px) {
+              #fs-menu .container .row .social li a {
+                margin-right: 20px; } }
+            #fs-menu .container .row .social li a:hover img path,
+            #fs-menu .container .row .social li a:hover svg path, #fs-menu .container .row .social li a:focus img path,
+            #fs-menu .container .row .social li a:focus svg path {
+              fill: #e12a55; }
+            #fs-menu .container .row .social li a img,
+            #fs-menu .container .row .social li a svg {
+              width: 30px;
+              height: 30px; }
+              @media only screen and (max-width: 575px) {
+                #fs-menu .container .row .social li a img,
+                #fs-menu .container .row .social li a svg {
+                  width: 25px;
+                  height: 25px; } }
+              #fs-menu .container .row .social li a img path,
+              #fs-menu .container .row .social li a svg path {
+                fill: #fff;
+                -webkit-transition: .3s;
+                transition: .3s; }
+
+/*----------------------------------------
+------------------------------------------
+	## TOP MENU
+------------------------------------------
+----------------------------------------*/
+#top-menu {
+  position: absolute;
+  width: 100%;
+  z-index: 998;
+  margin: 0 auto;
+  display: block;
+  left: 0;
+  top: 60px; }
+  @media only screen and (max-width: 1200px) {
+    #top-menu {
+      top: 50px; } }
+  @media only screen and (max-width: 992px) {
+    #top-menu {
+      top: 40px; } }
+  @media only screen and (max-width: 767px) {
+    #top-menu {
+      top: 30px; } }
+  @media only screen and (max-width: 575px) {
+    #top-menu {
+      top: 25px; } }
+  #top-menu .logo {
+    float: left;
+    display: inline-block; }
+    #top-menu .logo:hover img path,
+    #top-menu .logo:hover img polygon,
+    #top-menu .logo:hover img rect,
+    #top-menu .logo:hover svg path,
+    #top-menu .logo:hover svg polygon,
+    #top-menu .logo:hover svg rect, #top-menu .logo:focus img path,
+    #top-menu .logo:focus img polygon,
+    #top-menu .logo:focus img rect,
+    #top-menu .logo:focus svg path,
+    #top-menu .logo:focus svg polygon,
+    #top-menu .logo:focus svg rect {
+      fill: #e12a55; }
+    #top-menu .logo img,
+    #top-menu .logo svg {
+      width: 300px;
+      height: auto; }
+      @media only screen and (max-width: 1360px) {
+        #top-menu .logo img,
+        #top-menu .logo svg {
+          width: 250px;
+          height: auto; } }
+      @media only screen and (max-width: 767px) {
+        #top-menu .logo img,
+        #top-menu .logo svg {
+          width: 200px; } }
+      #top-menu .logo img path,
+      #top-menu .logo img polygon,
+      #top-menu .logo img rect,
+      #top-menu .logo svg path,
+      #top-menu .logo svg polygon,
+      #top-menu .logo svg rect {
+        -webkit-transition: .3s;
+        transition: .3s; }
+  #top-menu .right-menu {
+    float: right;
+    text-align: right;
+    padding-top: 12px; }
+    @media only screen and (max-width: 1360px) {
+      #top-menu .right-menu {
+        padding-top: 8px; } }
+    @media only screen and (max-width: 767px) {
+      #top-menu .right-menu {
+        padding-top: 5px; } }
+    #top-menu .right-menu li {
+      display: inline-block;
+      vertical-align: middle; }
+      @media only screen and (max-width: 992px) {
+        #top-menu .right-menu li.desk {
+          display: none; } }
+      @media only screen and (max-width: 992px) {
+        #top-menu .right-menu li.sep {
+          display: none; } }
+      #top-menu .right-menu li.sep p {
+        padding: 0 20px;
+        color: #fff; }
+        @media only screen and (max-width: 1360px) {
+          #top-menu .right-menu li.sep p {
+            padding: 0 15px; } }
+        @media only screen and (max-width: 1200px) {
+          #top-menu .right-menu li.sep p {
+            padding: 0 10px; } }
+      #top-menu .right-menu li a.title-small {
+        color: #fff;
+        display: inline-block;
+        overflow: hidden;
+        background: -webkit-gradient(linear, left top, right top, from(#e12a55), color-stop(50%, #e12a55), color-stop(50%, #fff));
+        background: linear-gradient(to right, #e12a55, #e12a55 50%, #fff 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        -webkit-transition: .3s;
+        transition: .3s;
+        padding: 0 1px; }
+        #top-menu .right-menu li a.title-small:hover, #top-menu .right-menu li a.title-small:focus {
+          background-position: 0 110%; }
+    #top-menu .right-menu .social {
+      padding-left: 20px; }
+      @media only screen and (max-width: 1360px) {
+        #top-menu .right-menu .social {
+          padding-left: 15px; } }
+      @media only screen and (max-width: 1200px) {
+        #top-menu .right-menu .social {
+          padding-left: 10px; } }
+      @media only screen and (max-width: 767px) {
+        #top-menu .right-menu .social {
+          display: none; } }
+      #top-menu .right-menu .social li {
+        padding-left: 20px; }
+        @media only screen and (max-width: 1360px) {
+          #top-menu .right-menu .social li {
+            padding-left: 15px; } }
+        @media only screen and (max-width: 1200px) {
+          #top-menu .right-menu .social li {
+            padding-left: 10px; } }
+        #top-menu .right-menu .social li:nth-child(1) {
+          padding-right: 5px; }
+          @media only screen and (max-width: 1200px) {
+            #top-menu .right-menu .social li:nth-child(1) {
+              padding-right: 3px; } }
+        #top-menu .right-menu .social li a {
+          display: inline-block; }
+          #top-menu .right-menu .social li a:hover svg path, #top-menu .right-menu .social li a:focus svg path {
+            fill: #e12a55; }
+          #top-menu .right-menu .social li a svg {
+            display: inline-block;
+            width: 20px;
+            height: 20px; }
+            @media only screen and (max-width: 992px) {
+              #top-menu .right-menu .social li a svg {
+                width: 25px;
+                height: 25px; } }
+            #top-menu .right-menu .social li a svg path {
+              fill: #fff;
+              -webkit-transition: .3s;
+              transition: .3s; }
+    #top-menu .right-menu .menu {
+      display: none; }
+      @media only screen and (max-width: 992px) {
+        #top-menu .right-menu .menu {
+          display: inline-block; } }
+      #top-menu .right-menu .menu button {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 0; }
+        #top-menu .right-menu .menu button:hover svg path, #top-menu .right-menu .menu button:focus svg path {
+          fill: #e12a55; }
+        #top-menu .right-menu .menu button svg {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          -webkit-transform: translateY(-1px);
+                  transform: translateY(-1px); }
+          #top-menu .right-menu .menu button svg path {
+            fill: #fff;
+            -webkit-transition: .3s;
+            transition: .3s; }
+
+#floating-fs {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e12a55;
+  z-index: 999;
+  display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-top: -200px; }
+  @media only screen and (max-width: 992px) {
+    #floating-fs {
+      display: block; } }
+  #floating-fs.visible {
+    margin-top: 0; }
+  #floating-fs:hover, #floating-fs:focus {
+    background-color: #111; }
+  #floating-fs img,
+  #floating-fs svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    #floating-fs img path,
+    #floating-fs svg path {
+      fill: #fff; }
+
+/*----------------------------------------
+------------------------------------------
+	## FOOTER
+------------------------------------------
+----------------------------------------*/
+#footer {
+  background-color: #111;
+  padding: 50px 0; }
+  @media only screen and (max-width: 575px) {
+    #footer {
+      padding: 40px 0;
+      text-align: center; } }
+  #footer .logo {
+    float: left;
+    display: inline-block; }
+    @media only screen and (max-width: 575px) {
+      #footer .logo {
+        float: none; } }
+    #footer .logo img,
+    #footer .logo svg {
+      width: 200px;
+      height: auto; }
+      @media only screen and (max-width: 575px) {
+        #footer .logo img,
+        #footer .logo svg {
+          width: 150px; } }
+  #footer p {
+    color: #fff;
+    text-align: right;
+    float: right; }
+    @media only screen and (max-width: 575px) {
+      #footer p {
+        float: none;
+        text-align: center;
+        padding-top: 10px; } }
+
+/* PAGES */
+/*----------------------------------------
+------------------------------------------
+	## HOME
+------------------------------------------
+----------------------------------------*/
+body.home #lines {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+  @media only screen and (max-width: 575px) {
+    body.home #lines {
+      display: none; } }
+  body.home #lines .container {
+    height: 100%; }
+    body.home #lines .container .row {
+      height: 100%; }
+      body.home #lines .container .row .col-12 {
+        position: relative; }
+        body.home #lines .container .row .col-12 .line {
+          position: absolute;
+          top: 0;
+          display: block;
+          width: 1px;
+          height: 100%;
+          background-color: #f3f3f3; }
+          body.home #lines .container .row .col-12 .line:nth-child(1) {
+            left: 0; }
+          body.home #lines .container .row .col-12 .line:nth-child(2) {
+            left: 25%; }
+            @media only screen and (max-width: 992px) {
+              body.home #lines .container .row .col-12 .line:nth-child(2) {
+                display: none; } }
+          body.home #lines .container .row .col-12 .line:nth-child(3) {
+            left: 50%; }
+          body.home #lines .container .row .col-12 .line:nth-child(4) {
+            left: 75%; }
+            @media only screen and (max-width: 992px) {
+              body.home #lines .container .row .col-12 .line:nth-child(4) {
+                display: none; } }
+          body.home #lines .container .row .col-12 .line:nth-child(5) {
+            right: 0; }
+
+body.home #banner-top {
+  z-index: 3;
+  overflow: visible; }
+  body.home #banner-top .bg {
+    background: #111 url(../img/banner-top-bg.jpg) center top/cover no-repeat;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 150px); }
+    @media only screen and (max-width: 1660px) {
+      body.home #banner-top .bg {
+        height: calc(100% - 130px);
+        background-size: contain; } }
+    @media only screen and (max-width: 1360px) {
+      body.home #banner-top .bg {
+        height: calc(100% - 100px); } }
+    @media only screen and (max-width: 1200px) {
+      body.home #banner-top .bg {
+        height: calc(100% - 70px); } }
+    @media only screen and (max-width: 767px) {
+      body.home #banner-top .bg {
+        height: calc(100% - 40px); } }
+  body.home #banner-top .col-12 {
+    position: relative;
+    z-index: 2;
+    padding-top: 300px;
+    padding-bottom: 300px; }
+    @media only screen and (max-width: 1660px) {
+      body.home #banner-top .col-12 {
+        padding-top: 280px;
+        padding-bottom: 280px; } }
+    @media only screen and (max-width: 1360px) {
+      body.home #banner-top .col-12 {
+        padding-top: 270px;
+        padding-bottom: 250px; } }
+    @media only screen and (max-width: 1200px) {
+      body.home #banner-top .col-12 {
+        padding-top: 250px;
+        padding-bottom: 200px; } }
+    @media only screen and (max-width: 992px) {
+      body.home #banner-top .col-12 {
+        padding-top: 200px;
+        padding-bottom: 180px; } }
+    @media only screen and (max-width: 767px) {
+      body.home #banner-top .col-12 {
+        padding-top: 100px;
+        padding-bottom: 120px; } }
+    @media only screen and (max-width: 575px) {
+      body.home #banner-top .col-12 {
+        padding-top: 70px;
+        padding-bottom: 90px; } }
+    body.home #banner-top .col-12 .title-bigger {
+      position: relative;
+      z-index: 2;
+      color: #fff; }
+      @media only screen and (max-width: 1360px) {
+        body.home #banner-top .col-12 .title-bigger {
+          width: 300px;
+          display: block; } }
+      @media only screen and (max-width: 767px) {
+        body.home #banner-top .col-12 .title-bigger {
+          padding-top: 50px; } }
+      body.home #banner-top .col-12 .title-bigger span {
+        display: inline-block;
+        background-color: #e12a55;
+        padding: 5px 20px; }
+        @media only screen and (max-width: 992px) {
+          body.home #banner-top .col-12 .title-bigger span {
+            padding: 5px 15px; } }
+    body.home #banner-top .col-12 .text-medium {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      display: block;
+      width: 550px;
+      max-width: 100%;
+      margin: 40px 0; }
+      @media only screen and (max-width: 1200px) {
+        body.home #banner-top .col-12 .text-medium {
+          margin: 35px 0;
+          width: 500px; } }
+      @media only screen and (max-width: 992px) {
+        body.home #banner-top .col-12 .text-medium {
+          width: 350px;
+          margin: 30px 0; } }
+      @media only screen and (max-width: 575px) {
+        body.home #banner-top .col-12 .text-medium {
+          width: 70%; } }
+    body.home #banner-top .col-12 .pink-button {
+      position: relative;
+      z-index: 2; }
+    body.home #banner-top .col-12 .big-image {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+      display: block;
+      width: 50%;
+      height: 80%;
+      background: url(../img/banner-top-photo.jpg) center center/cover no-repeat; }
+      @media only screen and (max-width: 767px) {
+        body.home #banner-top .col-12 .big-image {
+          height: 85%; } }
+    body.home #banner-top .col-12 .scroll {
+      position: absolute;
+      z-index: 3;
+      right: -50px;
+      bottom: 200px;
+      display: inline-block;
+      cursor: pointer; }
+      @media only screen and (max-width: 1660px) {
+        body.home #banner-top .col-12 .scroll {
+          bottom: 180px; } }
+      @media only screen and (max-width: 1360px) {
+        body.home #banner-top .col-12 .scroll {
+          bottom: 150px; } }
+      @media only screen and (max-width: 1200px) {
+        body.home #banner-top .col-12 .scroll {
+          display: none; } }
+      body.home #banner-top .col-12 .scroll:hover img path,
+      body.home #banner-top .col-12 .scroll:hover svg path, body.home #banner-top .col-12 .scroll:focus img path,
+      body.home #banner-top .col-12 .scroll:focus svg path {
+        fill: #e12a55; }
+      body.home #banner-top .col-12 .scroll img,
+      body.home #banner-top .col-12 .scroll svg {
+        width: 12px;
+        height: auto; }
+        body.home #banner-top .col-12 .scroll img path,
+        body.home #banner-top .col-12 .scroll svg path {
+          -webkit-transition: .3s;
+          transition: .3s; }
+    body.home #banner-top .col-12 .pink-line {
+      position: absolute;
+      width: 1px;
+      height: 600px;
+      display: block;
+      left: 9%;
+      background-color: #e12a55;
+      top: 75%; }
+      @media only screen and (max-width: 1660px) {
+        body.home #banner-top .col-12 .pink-line {
+          top: 77%; } }
+      @media only screen and (max-width: 1360px) {
+        body.home #banner-top .col-12 .pink-line {
+          top: 80%;
+          height: 500px; } }
+      @media only screen and (max-width: 1200px) {
+        body.home #banner-top .col-12 .pink-line {
+          top: 83%;
+          left: 11%;
+          height: 400px; } }
+      @media only screen and (max-width: 992px) {
+        body.home #banner-top .col-12 .pink-line {
+          left: 9%;
+          height: 200px; } }
+      @media only screen and (max-width: 767px) {
+        body.home #banner-top .col-12 .pink-line {
+          top: 88%;
+          left: 10%;
+          height: 150px; } }
+      @media only screen and (max-width: 575px) {
+        body.home #banner-top .col-12 .pink-line {
+          top: 90%;
+          height: 120px; } }
+      @media only screen and (max-width: 420px) {
+        body.home #banner-top .col-12 .pink-line {
+          height: 90px; } }
+
+body.home #about-me {
+  z-index: 2;
+  padding-top: 130px;
+  padding-bottom: 150px; }
+  @media only screen and (max-width: 1360px) {
+    body.home #about-me {
+      padding-bottom: 120px; } }
+  @media only screen and (max-width: 1200px) {
+    body.home #about-me {
+      padding-bottom: 100px; } }
+  @media only screen and (max-width: 992px) {
+    body.home #about-me {
+      padding-top: 80px;
+      padding-bottom: 0; } }
+  @media only screen and (max-width: 575px) {
+    body.home #about-me {
+      padding-top: 70px; } }
+  @media only screen and (max-width: 420px) {
+    body.home #about-me {
+      padding-top: 50px; } }
+  body.home #about-me .left {
+    position: relative;
+    z-index: 1; }
+    body.home #about-me .left .title-bigger {
+      color: #e12a55;
+      white-space: nowrap;
+      display: none;
+      margin-bottom: 30px; }
+      @media only screen and (max-width: 992px) {
+        body.home #about-me .left .title-bigger {
+          display: block; } }
+      @media only screen and (max-width: 575px) {
+        body.home #about-me .left .title-bigger {
+          margin-bottom: 20px; } }
+      body.home #about-me .left .title-bigger span {
+        color: #ddd;
+        -webkit-text-fill-color: #fff;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #ddd; }
+    body.home #about-me .left .gray-block {
+      position: absolute;
+      z-index: 1;
+      top: -100px;
+      left: -30px;
+      display: block;
+      width: 150px;
+      height: 500px;
+      background-color: #f3f3f3; }
+      @media only screen and (max-width: 992px) {
+        body.home #about-me .left .gray-block {
+          display: none; } }
+    body.home #about-me .left .circle {
+      position: absolute;
+      z-index: 4;
+      right: 100px;
+      bottom: 100px;
+      width: 170px;
+      height: 170px;
+      -webkit-animation: rotation 30s linear infinite;
+              animation: rotation 30s linear infinite; }
+      @media only screen and (max-width: 992px) {
+        body.home #about-me .left .circle {
+          bottom: 50px;
+          right: 50px; } }
+      @media only screen and (max-width: 575px) {
+        body.home #about-me .left .circle {
+          width: 130px;
+          height: 130px;
+          right: 30px;
+          bottom: 30px; } }
+      body.home #about-me .left .circle path {
+        fill: #fff; }
+    body.home #about-me .left .big-image {
+      display: block;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background: url(../img/about-big.jpg) center center/cover no-repeat; }
+      @media only screen and (max-width: 992px) {
+        body.home #about-me .left .big-image {
+          height: 450px;
+          margin-left: -15px;
+          width: calc(100% + 30px); } }
+      @media only screen and (max-width: 420px) {
+        body.home #about-me .left .big-image {
+          height: 400px; } }
+    body.home #about-me .left .pink-image {
+      position: absolute;
+      z-index: 3;
+      display: block;
+      bottom: -150px;
+      right: -50px;
+      width: 230px;
+      height: 87%;
+      background: url(../img/about-pink.jpg) center center/cover no-repeat; }
+      @media only screen and (max-width: 1360px) {
+        body.home #about-me .left .pink-image {
+          bottom: -120px; } }
+      @media only screen and (max-width: 1200px) {
+        body.home #about-me .left .pink-image {
+          bottom: -100px; } }
+      @media only screen and (max-width: 992px) {
+        body.home #about-me .left .pink-image {
+          display: none; } }
+  body.home #about-me .right {
+    position: relative;
+    z-index: 2;
+    padding-top: 70px; }
+    @media only screen and (max-width: 1200px) {
+      body.home #about-me .right {
+        padding-top: 50px; } }
+    @media only screen and (max-width: 992px) {
+      body.home #about-me .right {
+        padding-top: 40px; } }
+    @media only screen and (max-width: 575px) {
+      body.home #about-me .right {
+        padding-top: 30px; } }
+    body.home #about-me .right .title-bigger {
+      color: #e12a55;
+      white-space: nowrap;
+      float: right; }
+      @media only screen and (max-width: 992px) {
+        body.home #about-me .right .title-bigger {
+          display: none; } }
+      body.home #about-me .right .title-bigger span {
+        color: #ddd;
+        -webkit-text-fill-color: #fff;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #ddd; }
+    body.home #about-me .right .text-medium {
+      padding-left: 100px;
+      padding-right: 20px;
+      display: block;
+      margin: 50px 0 60px 0;
+      color: #666; }
+      @media only screen and (max-width: 1360px) {
+        body.home #about-me .right .text-medium {
+          padding-left: 80px;
+          padding-right: 0; } }
+      @media only screen and (max-width: 1200px) {
+        body.home #about-me .right .text-medium {
+          margin: 40px 0; } }
+      @media only screen and (max-width: 992px) {
+        body.home #about-me .right .text-medium {
+          padding-left: 0;
+          margin-top: 0; } }
+    body.home #about-me .right .logos {
+      text-align: right;
+      padding-right: 20px; }
+      @media only screen and (max-width: 1360px) {
+        body.home #about-me .right .logos {
+          padding-right: 0; } }
+      @media only screen and (max-width: 992px) {
+        body.home #about-me .right .logos {
+          text-align: left; } }
+      body.home #about-me .right .logos img,
+      body.home #about-me .right .logos svg {
+        width: 200px;
+        height: auto; }
+        @media only screen and (max-width: 575px) {
+          body.home #about-me .right .logos img,
+          body.home #about-me .right .logos svg {
+            width: 150px; } }
+        body.home #about-me .right .logos img:hover path,
+        body.home #about-me .right .logos img:hover polygon, body.home #about-me .right .logos img:focus path,
+        body.home #about-me .right .logos img:focus polygon,
+        body.home #about-me .right .logos svg:hover path,
+        body.home #about-me .right .logos svg:hover polygon,
+        body.home #about-me .right .logos svg:focus path,
+        body.home #about-me .right .logos svg:focus polygon {
+          fill: #666; }
+        body.home #about-me .right .logos img path,
+        body.home #about-me .right .logos img polygon,
+        body.home #about-me .right .logos svg path,
+        body.home #about-me .right .logos svg polygon {
+          fill: #333;
+          -webkit-transition: .3s;
+          transition: .3s; }
+
+body.home #services-and-plans {
+  z-index: 2;
+  padding: 150px 0 120px 0; }
+  @media only screen and (max-width: 1200px) {
+    body.home #services-and-plans {
+      padding: 130px 0 100px 0; } }
+  @media only screen and (max-width: 992px) {
+    body.home #services-and-plans {
+      padding: 100px 0 20px 0; } }
+  @media only screen and (max-width: 767px) {
+    body.home #services-and-plans {
+      padding-top: 70px; } }
+  @media only screen and (max-width: 575px) {
+    body.home #services-and-plans {
+      padding-top: 50px; } }
+  body.home #services-and-plans .top {
+    text-align: center;
+    padding-bottom: 130px; }
+    @media only screen and (max-width: 1200px) {
+      body.home #services-and-plans .top {
+        padding-bottom: 100px; } }
+    @media only screen and (max-width: 992px) {
+      body.home #services-and-plans .top {
+        padding-bottom: 50px;
+        text-align: left; } }
+    @media only screen and (max-width: 767px) {
+      body.home #services-and-plans .top {
+        padding-bottom: 30px; } }
+    @media only screen and (max-width: 575px) {
+      body.home #services-and-plans .top {
+        padding-bottom: 20px; } }
+    body.home #services-and-plans .top .title-bigger {
+      color: #e12a55; }
+      body.home #services-and-plans .top .title-bigger span {
+        color: #ddd;
+        -webkit-text-fill-color: #fff;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #ddd; }
+  @media only screen and (max-width: 992px) {
+    body.home #services-and-plans .left,
+    body.home #services-and-plans .right {
+      padding-bottom: 70px; } }
+  @media only screen and (max-width: 575px) {
+    body.home #services-and-plans .left,
+    body.home #services-and-plans .right {
+      padding-bottom: 50px; } }
+  @media only screen and (max-width: 420px) {
+    body.home #services-and-plans .left,
+    body.home #services-and-plans .right {
+      padding-bottom: 40px; } }
+  @media only screen and (max-width: 992px) {
+    body.home #services-and-plans .left .title,
+    body.home #services-and-plans .right .title {
+      display: block;
+      background-color: #666;
+      padding: 25px 100px 20px 30px;
+      position: relative; } }
+  @media only screen and (max-width: 575px) {
+    body.home #services-and-plans .left .title,
+    body.home #services-and-plans .right .title {
+      padding: 20px 80px 15px 25px; } }
+  body.home #services-and-plans .left .title .title-big,
+  body.home #services-and-plans .right .title .title-big {
+    display: inline-block;
+    vertical-align: middle;
+    color: #e12a55; }
+    @media only screen and (max-width: 992px) {
+      body.home #services-and-plans .left .title .title-big,
+      body.home #services-and-plans .right .title .title-big {
+        color: #fff; } }
+  body.home #services-and-plans .left .title img,
+  body.home #services-and-plans .left .title svg,
+  body.home #services-and-plans .right .title img,
+  body.home #services-and-plans .right .title svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    margin-left: 10px; }
+    @media only screen and (max-width: 1200px) {
+      body.home #services-and-plans .left .title img,
+      body.home #services-and-plans .left .title svg,
+      body.home #services-and-plans .right .title img,
+      body.home #services-and-plans .right .title svg {
+        width: 50px;
+        height: 50px; } }
+    @media only screen and (max-width: 992px) {
+      body.home #services-and-plans .left .title img,
+      body.home #services-and-plans .left .title svg,
+      body.home #services-and-plans .right .title img,
+      body.home #services-and-plans .right .title svg {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        right: 25px;
+        width: 60px;
+        height: 60px; } }
+    @media only screen and (max-width: 575px) {
+      body.home #services-and-plans .left .title img,
+      body.home #services-and-plans .left .title svg,
+      body.home #services-and-plans .right .title img,
+      body.home #services-and-plans .right .title svg {
+        width: 45px;
+        height: 45px;
+        right: 20px; } }
+    body.home #services-and-plans .left .title img path,
+    body.home #services-and-plans .left .title svg path,
+    body.home #services-and-plans .right .title img path,
+    body.home #services-and-plans .right .title svg path {
+      fill: #e12a55; }
+      @media only screen and (max-width: 992px) {
+        body.home #services-and-plans .left .title img path,
+        body.home #services-and-plans .left .title svg path,
+        body.home #services-and-plans .right .title img path,
+        body.home #services-and-plans .right .title svg path {
+          fill: #fff; } }
+  body.home #services-and-plans .left .title .text-big,
+  body.home #services-and-plans .right .title .text-big {
+    display: block;
+    color: #666;
+    margin-top: 10px;
+    font-weight: 700; }
+    @media only screen and (max-width: 992px) {
+      body.home #services-and-plans .left .title .text-big,
+      body.home #services-and-plans .right .title .text-big {
+        margin-top: 0;
+        color: #fff; } }
+    @media only screen and (max-width: 767px) {
+      body.home #services-and-plans .left .title .text-big,
+      body.home #services-and-plans .right .title .text-big {
+        margin-top: 5px; } }
+    @media only screen and (max-width: 575px) {
+      body.home #services-and-plans .left .title .text-big,
+      body.home #services-and-plans .right .title .text-big {
+        margin-top: 3px; } }
+    body.home #services-and-plans .left .title .text-big .text-medium,
+    body.home #services-and-plans .right .title .text-big .text-medium {
+      font-size: 20px;
+      font-weight: 400; }
+      @media only screen and (max-width: 1200px) {
+        body.home #services-and-plans .left .title .text-big .text-medium,
+        body.home #services-and-plans .right .title .text-big .text-medium {
+          font-size: 18px; } }
+  body.home #services-and-plans .left .div,
+  body.home #services-and-plans .right .div {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 30px 0 40px 0; }
+    @media only screen and (max-width: 992px) {
+      body.home #services-and-plans .left .div,
+      body.home #services-and-plans .right .div {
+        display: none; } }
+  body.home #services-and-plans .left .list,
+  body.home #services-and-plans .right .list {
+    display: block;
+    margin-bottom: 40px; }
+    @media only screen and (max-width: 992px) {
+      body.home #services-and-plans .left .list,
+      body.home #services-and-plans .right .list {
+        margin-top: 30px;
+        margin-bottom: 30px; } }
+    @media only screen and (max-width: 575px) {
+      body.home #services-and-plans .left .list,
+      body.home #services-and-plans .right .list {
+        margin-top: 20px;
+        margin-bottom: 20px; } }
+    body.home #services-and-plans .left .list .line,
+    body.home #services-and-plans .right .list .line {
+      display: block;
+      position: relative;
+      margin-bottom: 20px; }
+      @media only screen and (max-width: 992px) {
+        body.home #services-and-plans .left .list .line,
+        body.home #services-and-plans .right .list .line {
+          margin-bottom: 0;
+          padding: 10px 0; } }
+      @media only screen and (max-width: 992px) {
+        body.home #services-and-plans .left .list .line:nth-child(odd),
+        body.home #services-and-plans .right .list .line:nth-child(odd) {
+          background-color: #f3f3f3; } }
+      body.home #services-and-plans .left .list .line.yes img path,
+      body.home #services-and-plans .left .list .line.yes svg path,
+      body.home #services-and-plans .right .list .line.yes img path,
+      body.home #services-and-plans .right .list .line.yes svg path {
+        fill: #e12a55; }
+      body.home #services-and-plans .left .list .line.yes .text-medium,
+      body.home #services-and-plans .right .list .line.yes .text-medium {
+        color: #666; }
+      body.home #services-and-plans .left .list .line.no img path,
+      body.home #services-and-plans .left .list .line.no svg path,
+      body.home #services-and-plans .right .list .line.no img path,
+      body.home #services-and-plans .right .list .line.no svg path {
+        fill: #bbb; }
+      body.home #services-and-plans .left .list .line.no .text-medium,
+      body.home #services-and-plans .right .list .line.no .text-medium {
+        color: #bbb; }
+      body.home #services-and-plans .left .list .line img,
+      body.home #services-and-plans .left .list .line svg,
+      body.home #services-and-plans .right .list .line img,
+      body.home #services-and-plans .right .list .line svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 8px;
+        left: 0; }
+        @media only screen and (max-width: 1200px) {
+          body.home #services-and-plans .left .list .line img,
+          body.home #services-and-plans .left .list .line svg,
+          body.home #services-and-plans .right .list .line img,
+          body.home #services-and-plans .right .list .line svg {
+            top: 6px; } }
+        @media only screen and (max-width: 992px) {
+          body.home #services-and-plans .left .list .line img,
+          body.home #services-and-plans .left .list .line svg,
+          body.home #services-and-plans .right .list .line img,
+          body.home #services-and-plans .right .list .line svg {
+            width: 18px;
+            height: 18px;
+            top: 17px;
+            left: 17px; } }
+      body.home #services-and-plans .left .list .line .text-medium,
+      body.home #services-and-plans .right .list .line .text-medium {
+        display: block;
+        padding-left: 30px; }
+        @media only screen and (max-width: 992px) {
+          body.home #services-and-plans .left .list .line .text-medium,
+          body.home #services-and-plans .right .list .line .text-medium {
+            padding-left: 45px;
+            padding-right: 20px; } }
+  @media only screen and (max-width: 575px) {
+    body.home #services-and-plans .left .pink-button,
+    body.home #services-and-plans .right .pink-button {
+      display: block;
+      width: 100%;
+      text-align: center; } }
+
+body.home #video {
+  z-index: 2;
+  background: #111;
+  padding: 200px 0;
+  text-align: center; }
+  @media only screen and (max-width: 1360px) {
+    body.home #video {
+      padding: 180px 0; } }
+  @media only screen and (max-width: 1200px) {
+    body.home #video {
+      padding: 150px 0; } }
+  @media only screen and (max-width: 992px) {
+    body.home #video {
+      padding: 130px 0; } }
+  @media only screen and (max-width: 575px) {
+    body.home #video {
+      padding: 100px 0; } }
+  body.home #video video {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    opacity: .2; }
+  body.home #video .container {
+    position: relative;
+    z-index: 2; }
+    body.home #video .container a {
+      display: inline-block;
+      cursor: pointer; }
+      body.home #video .container a:hover .title-big, body.home #video .container a:focus .title-big {
+        color: #e12a55; }
+      body.home #video .container a:hover .icon .circle, body.home #video .container a:focus .icon .circle {
+        -webkit-transform: translate(-50%, -50%) scale(1.5);
+                transform: translate(-50%, -50%) scale(1.5); }
+      body.home #video .container a:hover .icon img path,
+      body.home #video .container a:hover .icon svg path, body.home #video .container a:focus .icon img path,
+      body.home #video .container a:focus .icon svg path {
+        fill: #e12a55; }
+      body.home #video .container a .title-big {
+        display: inline-block;
+        vertical-align: middle;
+        color: #fff;
+        -webkit-transition: .3s;
+        transition: .3s;
+        position: relative;
+        z-index: 3; }
+      body.home #video .container a .icon {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        z-index: 1;
+        width: 200px;
+        height: 200px; }
+        @media only screen and (max-width: 767px) {
+          body.home #video .container a .icon {
+            width: 150px;
+            height: 150px; } }
+        @media only screen and (max-width: 575px) {
+          body.home #video .container a .icon {
+            width: 120px;
+            height: 120px; } }
+        @media only screen and (max-width: 420px) {
+          body.home #video .container a .icon {
+            width: 80px;
+            height: 80px; } }
+        body.home #video .container a .icon .circle {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          -webkit-box-shadow: inset 0 0 0 1px #fff;
+                  box-shadow: inset 0 0 0 1px #fff;
+          -webkit-transition: .3s;
+          transition: .3s; }
+          @media only screen and (max-width: 575px) {
+            body.home #video .container a .icon .circle {
+              width: 140%;
+              height: 140%; } }
+          body.home #video .container a .icon .circle:before, body.home #video .container a .icon .circle:after {
+            border-radius: 5000px;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0; }
+          body.home #video .container a .icon .circle:before {
+            -webkit-animation: ripple 2s ease-out infinite;
+                    animation: ripple 2s ease-out infinite;
+            border: solid 1px #fff; }
+          body.home #video .container a .icon .circle:after {
+            -webkit-animation: ripple 2s 1s ease-out infinite;
+                    animation: ripple 2s 1s ease-out infinite;
+            border: solid 2px #fff; }
+        body.home #video .container a .icon img,
+        body.home #video .container a .icon svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+          @media only screen and (max-width: 767px) {
+            body.home #video .container a .icon img,
+            body.home #video .container a .icon svg {
+              width: 30px;
+              height: 30px; } }
+          @media only screen and (max-width: 575px) {
+            body.home #video .container a .icon img,
+            body.home #video .container a .icon svg {
+              width: 20px;
+              height: 20px; } }
+          body.home #video .container a .icon img path,
+          body.home #video .container a .icon svg path {
+            fill: #fff;
+            -webkit-transition: .3s;
+            transition: .3s; }
+
+body.home #contact-me {
+  z-index: 2; }
+  body.home #contact-me .top {
+    padding: 130px 0; }
+    @media only screen and (max-width: 1660px) {
+      body.home #contact-me .top {
+        padding: 110px 0 100px 0; } }
+    @media only screen and (max-width: 1200px) {
+      body.home #contact-me .top {
+        padding: 100px 0 80px 0; } }
+    @media only screen and (max-width: 992px) {
+      body.home #contact-me .top {
+        padding: 80px 0 60px 0; } }
+    @media only screen and (max-width: 767px) {
+      body.home #contact-me .top {
+        padding: 60px 0 40px 0; } }
+    @media only screen and (max-width: 575px) {
+      body.home #contact-me .top {
+        padding: 50px 0 30px 0; } }
+    @media only screen and (max-width: 420px) {
+      body.home #contact-me .top {
+        padding-top: 40px; } }
+    body.home #contact-me .top .left .title-bigger {
+      color: #e12a55; }
+      body.home #contact-me .top .left .title-bigger span {
+        color: #ddd;
+        -webkit-text-fill-color: #fff;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #ddd; }
+      @media only screen and (max-width: 767px) {
+        body.home #contact-me .top .left .title-bigger br {
+          display: none; } }
+    @media only screen and (max-width: 767px) {
+      body.home #contact-me .top .right {
+        padding-top: 30px; } }
+    @media only screen and (max-width: 420px) {
+      body.home #contact-me .top .right {
+        padding-top: 20px; } }
+    body.home #contact-me .top .right p {
+      color: #666; }
+      @media only screen and (max-width: 767px) {
+        body.home #contact-me .top .right p br {
+          margin-top: 5px; } }
+      @media only screen and (max-width: 767px) {
+        body.home #contact-me .top .right p .links {
+          margin-top: 30px;
+          display: block; } }
+      body.home #contact-me .top .right p .links a {
+        color: #333;
+        font-weight: 700;
+        display: inline-block;
+        overflow: hidden;
+        background: -webkit-gradient(linear, left top, right top, from(#e12a55), color-stop(50%, #e12a55), color-stop(50%, #333));
+        background: linear-gradient(to right, #e12a55, #e12a55 50%, #333 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        -webkit-transition: .3s;
+        transition: .3s;
+        padding: 0 1px;
+        line-height: 1; }
+        body.home #contact-me .top .right p .links a:hover, body.home #contact-me .top .right p .links a:focus {
+          background-position: 0 110%; }
+  body.home #contact-me .bottom {
+    padding-bottom: 130px; }
+    @media only screen and (max-width: 1660px) {
+      body.home #contact-me .bottom {
+        padding-bottom: 110px; } }
+    @media only screen and (max-width: 1200px) {
+      body.home #contact-me .bottom {
+        padding-bottom: 100px; } }
+    @media only screen and (max-width: 992px) {
+      body.home #contact-me .bottom {
+        padding-bottom: 80px; } }
+    @media only screen and (max-width: 575px) {
+      body.home #contact-me .bottom {
+        padding-bottom: 70px; } }
+    body.home #contact-me .bottom form .input-field {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 50px; }
+      @media only screen and (max-width: 1200px) {
+        body.home #contact-me .bottom form .input-field {
+          margin-bottom: 40px; } }
+      @media only screen and (max-width: 767px) {
+        body.home #contact-me .bottom form .input-field {
+          margin-bottom: 20px; } }
+      body.home #contact-me .bottom form .input-field input,
+      body.home #contact-me .bottom form .input-field textarea {
+        color: #666; }
+      body.home #contact-me .bottom form .input-field textarea {
+        height: 100%;
+        display: block;
+        min-height: 100%; }
+    body.home #contact-me .bottom form .right .input-field {
+      height: calc(100% - 58px); }
+      @media only screen and (max-width: 1200px) {
+        body.home #contact-me .bottom form .right .input-field {
+          height: calc(100% - 48px); } }
+      @media only screen and (max-width: 767px) {
+        body.home #contact-me .bottom form .right .input-field {
+          height: 200px; } }
+      @media only screen and (max-width: 575px) {
+        body.home #contact-me .bottom form .right .input-field {
+          height: 150px; } }
+    body.home #contact-me .bottom form .last {
+      text-align: right; }
+      @media only screen and (max-width: 575px) {
+        body.home #contact-me .bottom form .last label {
+          display: block;
+          width: 100%;
+          text-align: center; } }
+
+body.home .hiddendiv {
+  display: none !important;
+  width: 0 !important; }

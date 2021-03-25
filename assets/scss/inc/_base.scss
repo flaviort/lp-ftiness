@@ -1,0 +1,160 @@
+/*----------------------------------------
+------------------------------------------
+	## GENERAL
+------------------------------------------
+----------------------------------------*/
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+*:focus, *:hover, * {
+	outline: none;
+}
+
+.cf::after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+.no-padding {
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+
+.wow {
+	visibility: hidden;
+}
+
+.vcenter {
+	display: flex;
+	align-items: center;
+}
+
+.valign {
+	display: flex;
+	flex-direction: row;
+
+	> [class^="col-"],
+	> [class*=" col-"] {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+} // END VALIGN
+
+.fancybox-slide > * {
+	padding: 0;
+}
+
+.svg {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+} // END SVG
+
+section {
+	position: relative;
+	overflow: hidden;
+}
+
+a {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	outline: none!important;
+}
+
+img, svg {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	max-width: 100%;
+}
+
+button {
+	outline: none!important;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+textarea, input {
+	-webkit-appearance: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+form label[for="sendContact"],
+form label[for="sendNews"] {
+	cursor: pointer;
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+}
+
+body.no-scroll {
+	overflow: hidden!important;
+}
+
+br {
+	line-height: inherit;
+}
+
+.block { display: inline-block; }
+.rellax { display: inline-block; }
+
+p, a, h1, h2, h3, li, span, button, br, b, strong {
+	font-family: sans-serif;
+} // END SANS SERIF EVERYTHING
+
+button {
+	&:focus {
+		background-color: transparent;
+	}
+}
+
+.body-overflow {
+	overflow: hidden;
+}
+
+.video-wrapper {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-wrapper iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+body {
+	.fancybox-slide {
+		@media #{$mq-md-max} {
+			padding: 20px;
+		}
+
+		@media #{$mq-md-max} {
+			padding: 15px;
+		}
+	} // END FANCYBOX SLIDE
+} // END BODY
