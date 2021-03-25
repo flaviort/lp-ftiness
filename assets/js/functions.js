@@ -7,39 +7,10 @@ $(document).ready(function() {
 		$('html,body').animate({scrollTop: $(aid).offset().top},'slow');
 	});
 
-	//CHROME FOR MAC
-	$(function () {
-		if (navigator.userAgent.match(/Macintosh/) && navigator.userAgent.match(/Chrome/)) {
-			$("body").addClass("user-is-on-chrome-for-mac");
-		}
-	});
-
-	// SAFARI
-	if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-		$("body").addClass("user-is-on-safari");
-	};
-
-	// MOBILE
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		$("body").addClass("user-is-on-mobile");
-	};
-
-	// IPAD
-	if( /iPad/i.test(navigator.userAgent) ) {
-		$("body").addClass("user-is-on-ipad");
-	};
-
-	// IPHONE
-	if(navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPhone/i) || (navigator.userAgent.match(/iPod/i))) {
-		$("body").addClass("user-is-on-iphone");
-	};
-
 	// WOW
-	if ($("body").hasClass("home")) {} else {
-		wow = new WOW({
-			live: true
-		}).init();
-	};
+	wow = new WOW({
+		live: true
+	}).init();
 
 	// REPLACE ALL SVG IMAGES WITH INLINE SVG
 	jQuery('img.svg').each(function(){
